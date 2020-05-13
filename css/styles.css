@@ -1,0 +1,35 @@
+/* Creamos un scroll interno y estilos para centrar los elementos*/
+.parallax
+{
+    height: 200vh;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.parallax__contenedor
+{
+    display: inline-block;
+    margin-top: 150px;
+    position: relative;
+    transition: .3s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+/* Esto es la mascara, le damos el degradado que se movera y el tamaño deseado */
+.parallax__shape
+{
+    background-image: url("../img/shape.jpg");
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    transition: .3s cubic-bezier(0.28, 0.11, 0.32, 1);
+
+    /* Estas medidas son sacadas a ojo porciento involucran la posicion inicial del fono y la de la mascara */
+    top: 75px;
+    right: 161px;
+    background-position: -54px;
+
+    /* NUEVA PROPIEDAD */
+    /* Esta propiedad es la que crea la forma de la mascara, debe ser transparente o un SVG con la forma*/
+    /* Esta propiedad 11/mayo/2020 debe ser prefixiada para poder funcionar */
+    -webkit-mask-image: url("../img/apple-mask.png");
+    mask-image: url("../img/apple-mask.png");
+}
