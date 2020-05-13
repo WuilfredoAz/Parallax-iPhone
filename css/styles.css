@@ -1,3 +1,8 @@
+body
+{
+    font-family: 'Raleway', sans-serif;
+}
+
 /* Creamos un scroll interno y estilos para centrar los elementos*/
 .parallax
 {
@@ -5,6 +10,8 @@
     width: 800px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 .parallax__contenedor
 {
@@ -12,6 +19,7 @@
     margin-top: 150px;
     position: relative;
     transition: .3s cubic-bezier(0.28, 0.11, 0.32, 1);
+    /* border: 1px solid red; */
 }
 /* Esto es la mascara, le damos el degradado que se movera y el tamaño deseado */
 .parallax__shape
@@ -32,4 +40,14 @@
     /* Esta propiedad 11/mayo/2020 debe ser prefixiada para poder funcionar */
     -webkit-mask-image: url("../img/apple-mask.png");
     mask-image: url("../img/apple-mask.png");
+}
+
+.parallax__title
+{
+    font-size: 5em;
+    text-align: center;
+    transform: translateY(250px);
+    color: #c5c5c5;
+    z-index: -1;
+    position: relative;
 }
